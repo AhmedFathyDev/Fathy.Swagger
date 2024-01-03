@@ -7,6 +7,8 @@ public static class DependencyInjection
 {
     public static void AddSwaggerService(this IServiceCollection services, OpenApiInfo openApiInfo)
     {
+        services.AddEndpointsApiExplorer();
+        
         services.AddSwaggerGen(swaggerGenOption =>
         {
             swaggerGenOption.OperationFilter<SwaggerLanguageFilter>();
