@@ -1,14 +1,15 @@
+using System;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace SwaggerService;
+namespace Fathy.Swagger;
 
 public static class DependencyInjection
 {
     public static void AddSwaggerService(this IServiceCollection services, OpenApiInfo openApiInfo)
     {
         services.AddEndpointsApiExplorer();
-        
+
         services.AddSwaggerGen(swaggerGenOption =>
         {
             swaggerGenOption.OperationFilter<SwaggerLanguageFilter>();
@@ -16,7 +17,7 @@ public static class DependencyInjection
 
             swaggerGenOption.SwaggerDoc(openApiInfo.Version, openApiInfo);
 
-            swaggerGenOption.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            swaggerGenOption.AddSecurityDefinition("Bearer", new()
             {
                 In = ParameterLocation.Header,
                 Type = SecuritySchemeType.Http,
@@ -26,12 +27,12 @@ public static class DependencyInjection
                 Description = "Please enter JWT Bearer token **only**.",
             });
 
-            swaggerGenOption.AddSecurityRequirement(new OpenApiSecurityRequirement
+            swaggerGenOption.AddSecurityRequirement(new()
             {
                 {
-                    new OpenApiSecurityScheme
+                    new()
                     {
-                        Reference = new OpenApiReference
+                        Reference = new()
                         {
                             Id = "Bearer",
                             Type = ReferenceType.SecurityScheme

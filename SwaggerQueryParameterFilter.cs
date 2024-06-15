@@ -1,15 +1,16 @@
+using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace SwaggerService;
+namespace Fathy.Swagger;
 
 public partial class SwaggerQueryParameterFilter : IOperationFilter
 {
     [GeneratedRegex(@"{(?<RouteParameter>\w+)\?}")]
     private static partial Regex Pattern();
-    
+
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
         var httpMethodAttributes = context.MethodInfo
