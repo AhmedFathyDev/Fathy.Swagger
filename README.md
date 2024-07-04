@@ -6,13 +6,13 @@ NuGet package for efficiently adding swagger in ASP.NET Core Web API apps. It si
 
 1. **Authorization**: Enable `Bearer` authorization by adding JWT bearer token to test authorized APIs.
 
-![Authorization](images/Authorization.png)
+![Authorization](https://raw.githubusercontent.com/AhmedFathyDev/Fathy.Swagger/master/images/Authorization.png)
 
-![Bearer](images/Bearer.png)
+![Bearer](https://raw.githubusercontent.com/AhmedFathyDev/Fathy.Swagger/master/images/Bearer.png)
 
 2. **Localization**: Enable localization by sending the `Accept-Language` header, facilitating better internationalization.
 
-![Accept-Language](images/Accept-Language.png)
+![Accept-Language](https://raw.githubusercontent.com/AhmedFathyDev/Fathy.Swagger/master/images/Accept-Language.png)
 
 3. **Minimal APIs**: Enable interactive UI for minimal API endpoints to explore and test directly in the browser.
 
@@ -27,7 +27,7 @@ app.MapGet("/", () => "Hello, World!");
 
 app.Run();
 ```
-![Minimal APIs](images/Minimal-APIs.png)
+![Minimal APIs](https://raw.githubusercontent.com/AhmedFathyDev/Fathy.Swagger/master/images/Minimal-APIs.png)
 
 4. **Query Parameters**: Enable sending date in the query string as query parameters, enhancing API usability and understanding.
 
@@ -36,7 +36,7 @@ app.Run();
 public IActionResult Verify([FromQuery] string code) => code == VerificationCode ?
     Ok("Verified...") : BadRequest("Wrong verification code!!!");
 ```
-![Query Parameters](images/Query-Parameters.png)
+![Query Parameters](https://raw.githubusercontent.com/AhmedFathyDev/Fathy.Swagger/master/images/Query-Parameters.png)
 
 ## Installing Package
 
