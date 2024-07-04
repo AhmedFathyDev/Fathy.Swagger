@@ -10,7 +10,7 @@ NuGet package for efficiently adding swagger in ASP.NET Core Web API apps. It si
 
 ![Bearer](https://raw.githubusercontent.com/AhmedFathyDev/Fathy.Swagger/master/images/Bearer.png)
 
-2. **Localization**: Enable localization by sending the `Accept-Language` header, facilitating better internationalization.
+2. **Localization**: Enable localization and support multi-languages by sending the `Accept-Language` header, facilitating better internationalization.
 
 ![Accept-Language](https://raw.githubusercontent.com/AhmedFathyDev/Fathy.Swagger/master/images/Accept-Language.png)
 
